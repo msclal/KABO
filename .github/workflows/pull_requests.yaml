@@ -1,4 +1,4 @@
-name: meThinks
+name: kabo
 on:
   pull_request:
     branches: [prod, dev]
