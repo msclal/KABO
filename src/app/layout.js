@@ -1,12 +1,18 @@
 import "./globals.css";
+import { Outfit } from "next/font/google";
+
 import localFont from "next/font/local";
+
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 const magilio = localFont({
   src: "../../public/fonts/magilio.ttf",
+  variable: "--font-magilio",
 });
 
 const nevis = localFont({
   src: "../../public/fonts/nevis.ttf",
+  variable: "--font-nevis",
 });
 
 export const metadata = {
@@ -17,8 +23,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${magilio.className} ${nevis.className}`}>
-        {children}
+      <body
+        // className={` ${outfit.variable}`}
+        className={`${magilio.variable} ${nevis.variable} ${outfit.variable}`}
+      >
+        <main className="bg-kabo-gray min-h-screen">{children}</main>
       </body>
     </html>
   );
