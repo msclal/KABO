@@ -12,11 +12,7 @@ export default function Home() {
         <Landing />
       </div>
       <Gallery />
-      {/* <div className=""> */}
-      {/* <InifiteScroll /> */}
-      {/* <Scroll /> */}
       <Projects />
-      {/* </div> */}
       <Footer />
     </div>
   );

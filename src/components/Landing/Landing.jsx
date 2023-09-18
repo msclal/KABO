@@ -16,7 +16,6 @@ export default function Hero() {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, 100vw"
             className="object-contain w-full"
             alt="KABO"
-            // priority={true}
           />
         </div>
         <div className="sm:hidden w-[400px] pt-40">
@@ -27,7 +26,6 @@ export default function Hero() {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, 100vw"
             className="object-contain w-full"
             alt="KABO"
-            // priority={true}
           />
         </div>
         <div className="flex-grow">
@@ -39,15 +37,4 @@ export default function Hero() {
       </p>
     </div>
   );
-}
-
-{
-  /* <div className="flex items-end text-kabo-white gap-x-5 bg-slate-500">
-        <p className="font-magilio text-9xl md:text-[13rem] xl:text-[20rem]">
-        KABO!
-        </p>
-        <p className="text-xl md:text-2xl xl:text-5xl mt-28 font-nevis">
-        [STUDIO]
-        </p>
-    </div> */
 }
