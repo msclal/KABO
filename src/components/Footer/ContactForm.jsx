@@ -24,7 +24,7 @@ export default function ContactForm() {
       });
 
       // await axios
-      //   .post(process.env.API_URL, form)
+      //   .post('/api/email/', form)
       //   .then((res) => {
       //     console.log(res);
       //   })
