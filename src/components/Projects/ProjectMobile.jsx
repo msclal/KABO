@@ -1,17 +1,11 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 
 import {
-  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Uranus from "@/images/uranus.png";
-import Desktop from "@/images/projects_desktop.png";
-import Example from "@/images/projects_mobile.png";
-import MarqueeScroll from "./MarqueeScroll";
 
 export default function ProjectMobile({ id, project, isOpen, handleClick }) {
   const { title, type, year, content, tools, imagesMobile } = project;
@@ -57,21 +51,6 @@ export default function ProjectMobile({ id, project, isOpen, handleClick }) {
                   {tool}
                 </span>
               ))}
-              {/* <p className="border-[0.5px] border-kabo-white rounded-3xl w-fit px-5 h-fit py-[2px]"> */}
-              {/* Figma
-              </p>
-              <p className="border-[0.5px] border-kabo-white rounded-3xl w-fit px-5 h-fit py-[2px]">
-                Next.js
-              </p>
-              <p className="border-[0.5px] border-kabo-white rounded-3xl w-fit px-5 h-fit py-[2px]">
-                TailwindCSS
-              </p>
-              <p className="border-[0.5px] border-kabo-white rounded-3xl w-fit px-5 h-fit py-[2px]">
-                Vercel
-              </p>
-              <p className="border-[0.5px] border-kabo-white rounded-3xl w-fit px-5 h-fit py-[2px]">
-                Resend
-              </p> */}
             </div>
           </div>
         </div>
@@ -84,9 +63,6 @@ export default function ProjectMobile({ id, project, isOpen, handleClick }) {
               className="w-full"
             />
           ))}
-          {/* <Image src={Example} alt="example" className="w-full" />
-          <Image src={Example} alt="example" className="w-full" />
-          <Image src={Example} alt="example" className="w-full" /> */}
         </div>
       </AccordionContent>
     </AccordionItem>

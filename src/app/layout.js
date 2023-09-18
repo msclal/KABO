@@ -25,11 +25,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        // className={` ${outfit.variable}`}
         className={`${magilio.variable} ${nevis.variable} ${outfit.variable}`}
       >
         <main className="bg-kabo-gray">
-          {/* <Navbar /> */}
           {children}
           <Toaster />
         </main>
