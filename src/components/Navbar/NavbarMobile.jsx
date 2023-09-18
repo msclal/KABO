@@ -77,7 +77,7 @@ export default function NavbarMobile() {
       <p
         onClick={toggleMenu}
         className="cursor-pointer 
-border-2 border-kabo-black bg-kabo-white text-kabo-black mix-blend-difference rounded-2xl px-4 fixed right-5 top-10 z-10"
+border-2 border-kabo-gray  bg-kabo-white text-kabo-black mix-blend-difference rounded-2xl px-4 fixed right-5 top-10 z-10 font-outfit"
       >
         Menu
       </p>

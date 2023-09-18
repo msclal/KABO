@@ -19,7 +19,7 @@ export default function ContactForm() {
       setForm({ name: "", email: "", message: "" });
       toast({
         variant: "success",
-        title: "Got your Message!",
+        title: "Message Sent!",
         description: "We'll get back to you as soon as possible.",
       });
 
