@@ -27,7 +27,7 @@ export async function POST(request) {
         <p>${message}</p></div>`,
     });
 
-    return NextResponse.json({ status: "OK", data });
+    return NextResponse.json({ status: "OK - GET", data });
   } catch (error) {
     return NextResponse.json({ status: "Error sending email.", error });
   }
