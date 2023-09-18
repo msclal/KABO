@@ -2,8 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import { Outfit } from "next/font/google";
 import localFont from "next/font/local";
-import Navbar from "@/components/Navbar/Navbar";
 
+// eslint-disable-next-line new-cap
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 const magilio = localFont({
