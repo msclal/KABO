@@ -2,7 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import { Outfit } from "next/font/google";
 import localFont from "next/font/local";
-
+// import { ActiveSectionContext } from "@/context/ActiveSection";
+import { ActiveSectionContextProvider } from "@/context/ActiveSection";
 // eslint-disable-next-line new-cap
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
@@ -27,10 +28,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${magilio.variable} ${nevis.variable} ${outfit.variable}`}
       >
-        <main className="bg-kabo-gray">
-          {children}
-          <Toaster />
-        </main>
+        <ActiveSectionContextProvider>
+          <main className="bg-kabo-gray">
+            {children}
+            <Toaster />
+          </main>
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

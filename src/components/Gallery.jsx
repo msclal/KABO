@@ -30,6 +30,7 @@ export default function Gallery() {
 		(min-width: 640px) calc(100vw - 64px),
 		100vw
 	"
+          draggable={false}
           className="object-cover"
         />
       </div>

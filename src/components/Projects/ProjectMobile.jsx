@@ -59,6 +59,7 @@ export default function ProjectMobile({ id, project, isOpen, handleClick }) {
             <Image
               key={index}
               src={image}
+              draggable={false}
               alt={`Image ${index + 1}`}
               className="w-full"
             />
