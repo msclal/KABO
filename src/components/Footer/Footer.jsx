@@ -17,6 +17,7 @@ export default function Footer() {
           src={Banner}
           alt="footer banner"
           fill
+          draggable={false}
           sizes="100vw"
           className="object-cover"
         />

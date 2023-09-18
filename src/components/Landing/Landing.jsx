@@ -17,6 +17,7 @@ export default function Hero() {
             src={LogoDesktop}
             width={700}
             height={500}
+            draggable={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, 100vw"
             className="object-contain w-full"
             alt="KABO"
@@ -27,6 +28,7 @@ export default function Hero() {
             src={LogoMobile}
             width={700}
             height={500}
+            draggable={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw, 100vw"
             className="object-contain w-full"
             alt="KABO"

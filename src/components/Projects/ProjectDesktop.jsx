@@ -35,7 +35,7 @@ export default function ProjectDesktop({ id, project, isOpen, handleClick }) {
         <div className="flex flex-col">
           <div className="grid grid-cols-3 w-full justify-items-center my-7">
             <div className="flex flex-col justify-start items-center space-y-5 pt-3">
-              <Image src={logo} alt="uranus 27" />
+              <Image src={logo} alt="uranus 27" draggable={false} />
               <Link
                 href={link}
                 target="_blank"
@@ -68,6 +68,7 @@ export default function ProjectDesktop({ id, project, isOpen, handleClick }) {
               <Image
                 key={index}
                 src={image}
+                draggable={false}
                 alt={`Image ${index + 1}`}
                 className="object-cover w-full"
               />
