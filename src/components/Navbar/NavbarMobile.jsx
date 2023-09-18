@@ -3,13 +3,13 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link as Skip } from "react-scroll";
 import MobileNavText from "./NavMobileText";
-
-const tabs = [
-  { id: "home", label: "HOME" },
-  { id: "info", label: "INFO" },
-  { id: "projects", label: "PROJECTS" },
-  { id: "contact", label: "CONTACT" },
-];
+import { sections } from "@/lib/data";
+// const tabs = [
+//   { id: "home", label: "HOME" },
+//   { id: "info", label: "INFO" },
+//   { id: "projects", label: "PROJECTS" },
+//   { id: "contact", label: "CONTACT" },
+// ];
 
 export default function NavbarMobile() {
   const [open, setOpen] = useState(false);
@@ -106,10 +106,10 @@ border-2 border-kabo-gray  bg-kabo-white text-kabo-black mix-blend-difference ro
                 className="flex flex-col h-screen justify-center font-lora items-center gap-16 text-center"
               >
                 {/* Menu items */}
-                {tabs.map((tab) => (
+                {sections.map((section) => (
                   <Skip
-                    key={tab.id}
-                    to={tab.id}
+                    key={section.id}
+                    to={section.id}
                     onClick={toggleMenu}
                     className="overflow-hidden cursor-pointer"
                   >
@@ -117,7 +117,7 @@ border-2 border-kabo-gray  bg-kabo-white text-kabo-black mix-blend-difference ro
                       variants={mobileLinkVars}
                       className="text-5xl uppercase text-kabo-white font-magilio text-center"
                     >
-                      {tab.label}
+                      {section.label}
                     </motion.div>
                   </Skip>
                 ))}
