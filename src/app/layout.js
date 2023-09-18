@@ -1,7 +1,8 @@
+import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import { Outfit } from "next/font/google";
-
 import localFont from "next/font/local";
+import Navbar from "@/components/Navbar/Navbar";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
@@ -27,7 +28,11 @@ export default function RootLayout({ children }) {
         // className={` ${outfit.variable}`}
         className={`${magilio.variable} ${nevis.variable} ${outfit.variable}`}
       >
-        <main className="bg-kabo-gray min-h-screen">{children}</main>
+        <main className="bg-kabo-gray">
+          {/* <Navbar /> */}
+          {children}
+          <Toaster />
+        </main>
       </body>
     </html>
   );
