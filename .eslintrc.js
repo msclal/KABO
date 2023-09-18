@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     "plugin:react/recommended",
-    "airbnb",
+    "google",
     "prettier",
     "next/core-web-vitals",
   ],
@@ -15,7 +15,5 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: {
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-  },
+  rules: { "require-jsdoc": "off" },
 };

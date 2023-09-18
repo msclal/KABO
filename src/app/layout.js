@@ -1,7 +1,20 @@
+import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+// eslint-disable-next-line new-cap
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+
+const magilio = localFont({
+  src: "../../public/fonts/magilio.ttf",
+  variable: "--font-magilio",
+});
+
+const nevis = localFont({
+  src: "../../public/fonts/nevis.ttf",
+  variable: "--font-nevis",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +24,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${magilio.variable} ${nevis.variable} ${outfit.variable}`}
+      >
+        <main className="bg-kabo-gray">
+          {children}
+          <Toaster />
+        </main>
+      </body>
     </html>
   );
 }
