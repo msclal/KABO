@@ -4,12 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link as Skip } from "react-scroll";
 import MobileNavText from "./NavMobileText";
 import { sections } from "@/lib/data";
-// const tabs = [
-//   { id: "home", label: "HOME" },
-//   { id: "info", label: "INFO" },
-//   { id: "projects", label: "PROJECTS" },
-//   { id: "contact", label: "CONTACT" },
-// ];
 
 export default function NavbarMobile() {
   const [open, setOpen] = useState(false);
@@ -123,7 +117,14 @@ border-2 border-kabo-gray  bg-kabo-white text-kabo-black mix-blend-difference ro
                 ))}
 
                 <MobileNavText className="relative -bottom-10 self-center text-kabo-gold underline underline-offset-4 cursor-pointer">
-                  KABO.blueprint@gmail.com
+                  <a
+                    href="mailto:kabo.blueprint@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="KABO Email"
+                  >
+                    KABO.blueprint@gmail.com
+                  </a>
                 </MobileNavText>
               </motion.div>
             </div>

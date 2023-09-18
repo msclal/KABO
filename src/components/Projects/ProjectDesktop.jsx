@@ -36,7 +36,12 @@ export default function ProjectDesktop({ id, project, isOpen, handleClick }) {
           <div className="grid grid-cols-3 w-full justify-items-center my-7">
             <div className="flex flex-col justify-start items-center space-y-5 pt-3">
               <Image src={logo} alt="uranus 27" />
-              <Link href={link} className="text-center w-full">
+              <Link
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center w-full"
+              >
                 {link}
               </Link>
             </div>

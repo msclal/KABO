@@ -33,14 +33,26 @@ export default function Footer() {
           <div className="flex gap-x-5 xl:gap-x-20 underline underline-offset-4">
             <Link
               href="mailto:kabo.blueprint@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="KABO Email"
             >
               KABO.blueprint@gmail.com
             </Link>
-            <Link href={"tel:9092145009"} aria-label="Phone">
+            <Link
+              href={"tel:9092145009"}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Phone"
+            >
               Mika: +1 (909) 214-5009
             </Link>
-            <Link href={"tel:9513488149"} aria-label="Phone">
+            <Link
+              href={"tel:9513488149"}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Phone"
+            >
               Bobby: +1 (951) 348-8149
             </Link>
           </div>
@@ -51,14 +63,26 @@ export default function Footer() {
           <div className="flex flex-col gap-y-1">
             <Link
               href="mailto:kabo.blueprint@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="KABO Email"
             >
               KABO.blueprint@gmail.com
             </Link>
-            <Link href={"tel:9092145009"} aria-label="Phone">
+            <Link
+              href={"tel:9092145009"}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Phone"
+            >
               Mika: +1 (909) 214-5009
             </Link>
-            <Link href={"tel:9513488149"} aria-label="Phone">
+            <Link
+              href={"tel:9513488149"}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Phone"
+            >
               Bobby: +1 (951) 348-8149
             </Link>
           </div>
