@@ -22,14 +22,14 @@ const AccordionTrigger = React.forwardRef(
         ref={ref}
         className={cn(
           "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all sm:hover:bg-kabo-white sm:hover:text-kabo-gray sm:hover:px-5 [&[data-state=open]>svg]:rotate-180 text-kabo-white duration-300",
-          className
+          className,
         )}
         {...props}
       >
         {children}
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
-  )
+  ),
 );
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
@@ -39,13 +39,13 @@ const AccordionContent = React.forwardRef(
       ref={ref}
       className={cn(
         "overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down bg-kabo-black text-kabo-white",
-        className
+        className,
       )}
       {...props}
     >
       <div className="pb-4 pt-0">{children}</div>
     </AccordionPrimitive.Content>
-  )
+  ),
 );
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
