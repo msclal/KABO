@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import MarqueeScroll from "./MarqueeScroll";
-import Project from "./ProjectDesktop";
+import ProjectDesktop from "./ProjectDesktop";
 import ProjectMobile from "./ProjectMobile";
 import { Accordion } from "@/components/ui/accordion";
 import { useSectionInView } from "@/lib/hooks";
@@ -22,9 +22,10 @@ export default function Projects() {
       className="py-0 xl:py-64 xl:pb-48 relative"
     >
       <MarqueeScroll />
+      {/* Desktop */}
       <Accordion type="single" collapsible className="w-full max-xl:hidden">
         {projectList.map((project, index) => (
-          <Project
+          <ProjectDesktop
             key={index}
             id={`item-${index + 1}`}
             project={project}
