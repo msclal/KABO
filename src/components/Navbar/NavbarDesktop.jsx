@@ -1,8 +1,7 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link as Skip } from "react-scroll";
-
+import { useActiveSectionContext } from "@/context/ActiveSection";
 const tabs = [
   { id: "home", label: "HOME" },
   { id: "info", label: "INFO" },
@@ -11,7 +10,8 @@ const tabs = [
 ];
 
 export default function NavDesktop() {
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <div className="flex font-outfit font-light gap-x-2 lg:gap-x-6 xl:gap-x-12 text-sm lg:text-base text-kabo-white fixed right-8 lg:right-16 max-md:hidden z-10 mix-blend-difference">
@@ -21,17 +21,20 @@ export default function NavDesktop() {
           to={tab.id}
           smooth={true}
           duration={500}
-          onClick={() => setActiveTab(tab.id)}
+          onClick={() => {
+            setActiveSection(tab.id);
+            setTimeOfLastClick(Date.now());
+          }}
           className={`${
-            activeTab === tab.id
+            tab.id === activeSection
               ? ""
-              : "hover:text-kabo-white/60 hover:duration-300"
+              : "hover:text-kabo-white/80 hover:duratation-300"
           } relative rounded-full px-4 py-1.5 text-sm font-medium text-white transition cursor-pointer`}
           style={{
             WebkitTapHighlightColor: "transparent",
           }}
         >
-          {activeTab === tab.id && (
+          {activeSection === tab.id && (
             <motion.span
               layoutId="bubble"
               className="absolute inset-0 z-10 border-2 border-kabo-black bg-kabo-white text-kabo-black mix-blend-difference rounded-2xl"

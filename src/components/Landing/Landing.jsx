@@ -1,12 +1,16 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import LandingCard from "./LandingCard";
 import LogoDesktop from "@/images/landing_desktop.svg";
 import LogoMobile from "@/images/landing_mobile.svg";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Hero() {
+  const { ref } = useSectionInView("home", 0.7);
+
   return (
-    <div className="flex flex-col px-5 sm:px-8 lg:px-16">
+    <section ref={ref} className="flex flex-col px-5 sm:px-8 lg:px-16">
       <div className="flex justify-between flex-wrap relative overflow-hidden">
         <div className="max-sm:hidden w-[800px] lg:w-[1000px] pt-32">
           <Image
@@ -35,6 +39,6 @@ export default function Hero() {
       <p className="absolute bottom-5 text-base font-outfit text-center text-kabo-white sm:text-left max-sm:px-0">
         From the collaborative work of Bobby and Mika.
       </p>
-    </div>
+    </section>
   );
 }

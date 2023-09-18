@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import { useSectionInView } from "@/lib/hooks";
 import Banner from "@/images/footer.jpg";
 
 export default function Footer() {
+  const { ref } = useSectionInView("contact", 0.8);
+
   const currentYear = new Date().getFullYear();
   return (
-    <section id="contact">
+    <section ref={ref} id="contact">
       <div className="relative h-[120px] sm:h-[250px]">
         <Image
           src={Banner}

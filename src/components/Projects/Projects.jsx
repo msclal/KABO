@@ -4,6 +4,7 @@ import MarqueeScroll from "./MarqueeScroll";
 import Project from "./ProjectDesktop";
 import ProjectMobile from "./ProjectMobile";
 import { Accordion } from "@/components/ui/accordion";
+import { useSectionInView } from "@/lib/hooks";
 import Uranus from "@/images/uranus.png";
 import Desktop from "@/images/projects_desktop.png";
 import Example from "@/images/projects_mobile.png";
@@ -27,7 +28,7 @@ const projectList = [
   },
   {
     id: "item-2",
-    title: "BELOW ZERO",
+    title: "STIMULANT",
     type: "WEB DESIGN & DEVELOPMENT",
     year: "2023",
     logo: Uranus,
@@ -43,8 +44,8 @@ const projectList = [
   },
   {
     id: "item-3",
-    title: "BELOW ZERO",
-    type: "WEB DESIGN & DEVELOPMENT",
+    title: "URANUS 27",
+    type: "WEB DESIGN",
     year: "2023",
     logo: Uranus,
     link: "uranus27.com",
@@ -61,13 +62,18 @@ const projectList = [
 
 export default function Projects() {
   const [isOpen, setIsOpen] = useState("");
+  const { ref } = useSectionInView("projects", 0.4);
 
   const handleClick = (projectId) => {
     setIsOpen(projectId);
   };
 
   return (
-    <section id="projects" className="py-0 xl:py-64 xl:pb-48 relative">
+    <section
+      id="projects"
+      ref={ref}
+      className="py-0 xl:py-64 xl:pb-48 relative"
+    >
       <MarqueeScroll />
       <Accordion type="single" collapsible className="w-full max-xl:hidden">
         {projectList.map((project, index) => (
